@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to get an API key · KawanCakap</title>
+<meta name="description" content="Step-by-step guide for teachers and students: get a free Gemini key or an OpenAI key and add it to KawanCakap.">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <a href="/" class="brand"><img src="/icon.svg" alt="" width="28" height="28"> KawanCakap</a>
+  <nav><a href="/">Student app</a><a href="/teacher.html">Teacher</a></nav>
+</header>
+<main class="result guide">
+  <p class="eyebrow">Guide for teachers &amp; students</p>
+  <h1>How to add an API key</h1>
+  <p class="lead">There are 2 ways to use KawanCakap:</p>
+
+  <div class="card">
+    <h3>✅ Option 1: Class code (no key needed)</h3>
+    <p>If your teacher gave you a class code, you don't need any key. Choose <b>Class code</b>, type the 6-letter code and start. It's free, with a daily limit per student.</p>
+    <p class="hint">Teachers: create a class on the <a href="/teacher.html">Teacher page</a> and share the code or the WhatsApp link with your students.</p>
+  </div>
+
+  <div class="card">
+    <h3>🔑 Option 2: Your own API key</h3>
+    <p>Use your own key when you don't have a class code, when the class's free sessions for today are used up, or when you want unlimited practice. Each person uses their <b>own</b> key on their own phone.</p>
+  </div>
+
+  <details class="card" open>
+    <summary><h3 class="inline">⭐ Gemini key: free, no card needed (recommended)</h3></summary>
+    <ol class="steps-list">
+      <li>Open <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a> and sign in with a Google account (Gmail).</li>
+      <li>Accept the terms if it asks.</li>
+      <li>Tap <b>Create API key</b>. If it asks for a project, choose the default one or tap <b>Create project</b>.</li>
+      <li>Tap <b>Copy</b>. The key starts with <code>AIza…</code>.</li>
+      <li>Open <a href="/">KawanCakap</a>, choose <b>My Gemini key</b>, paste the key in <b>API key</b> and tap <b>Start practice</b>.</li>
+    </ol>
+    <p class="hint">The free tier has a daily limit from Google. If you see "rate limit", wait a few minutes or try again tomorrow. Students under 18 may need a parent's Google account.</p>
+  </details>
+
+  <details class="card">
+    <summary><h3 class="inline">OpenAI key: paid, best voice</h3></summary>
+    <p class="hint">A ChatGPT Plus subscription does <b>not</b> include API access. The API is paid separately, pay as you go.</p>
+    <ol class="steps-list">
+      <li>Open <a href="https://platform.openai.com" target="_blank" rel="noopener">platform.openai.com</a> and log in (your ChatGPT account works).</li>
+      <li>Go to <b>Settings → Billing</b> and add credit (usually at least US$5, card needed). Without credit the key won't work.</li>
+      <li>Go to <b>Settings → Limits</b> and set a monthly budget so you're never surprised.</li>
+      <li>Open <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com/api-keys</a> and tap <b>Create new secret key</b>. Name it <code>kawancakap</code>.</li>
+      <li><b>Copy it straight away.</b> It starts with <code>sk-…</code> and is shown only once.</li>
+      <li>Open <a href="/">KawanCakap</a>, choose <b>My OpenAI key</b>, paste it and tap <b>Start practice</b>.</li>
+    </ol>
+  </details>
+
+  <div class="card goal">
+    <h3>🔒 Keep your key safe</h3>
+    <ul>
+      <li>Your key is saved only on your own phone or computer. KawanCakap sends it to Google/OpenAI for each turn and never stores it.</li>
+      <li>Don't share your key in WhatsApp groups or with classmates. Anyone with your key can use your quota or credit.</li>
+      <li>Teachers: don't give students your own paid key. Use a class code instead.</li>
+      <li>If a key leaks, delete it on the same page where you created it, then make a new one.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Problems?</h3>
+    <dl class="inter">
+      <dt>"Your API key was rejected"</dt><dd>The key was copied wrongly or deleted. Copy it again, with no spaces before or after.</dd>
+      <dt>"Rate limit or no credit left"</dt><dd>Gemini: wait a bit or try tomorrow. OpenAI: add credit under Billing.</dd>
+      <dt>"Gemini keys start with AIza" / "OpenAI keys start with sk-"</dt><dd>You chose the wrong option. Pick the one that matches your key.</dd>
+      <dt>Using a new phone</dt><dd>Paste the key again. Keys are saved per device.</dd>
+    </dl>
+  </div>
+  <a class="btn primary big" href="/">Start practising</a>
+</main>
+</body>
+</html>

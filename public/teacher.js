@@ -33,6 +33,7 @@ function showStart() {
   app.innerHTML = `<section class="result">
     <h1>Teacher dashboard</h1>
     <p class="lead">Create a class, share the code with your students, and see every practice session: transcripts, bands and feedback.</p>
+    <p class="hint">Want students to use their own AI key? <a href="/help.html">Read the API key guide</a>.</p>
     ${classes.length ? `<div class="card"><h3>Your classes on this device</h3><ul class="hist">${classes.map((c) => `<li><a href="#k=${c.code}.${c.key}"><span>Class ${esc(c.code)}</span></a></li>`).join('')}</ul></div>` : ''}
     <form id="create" class="card stack">
       <h3>Create a class</h3>
@@ -82,6 +83,14 @@ async function showClass(acc) {
         <a class="btn" href="https://wa.me/?text=${encodeURIComponent(`Practise SPM Speaking Part 3 with an AI partner 🎤\n${studentLink}\nClass code: ${c.code}`)}" target="_blank" rel="noopener">Share on WhatsApp</a>
       </div>
       <p class="hint">Keep your teacher link private. Bookmark it, it's your login: <button class="linkbtn" data-copy="${esc(teacherLink)}">copy teacher link</button></p>
+    </div>
+
+    <div class="card">
+      <h3>🔑 Students without free sessions left?</h3>
+      <p>Each student can use their own free Gemini key (no card needed) for unlimited practice. Share this guide with them: <a href="/help.html">${esc(location.origin)}/help.html</a></p>
+      <div class="row"><button class="btn" data-copy="${esc(location.origin + '/help.html')}">Copy guide link</button>
+      <a class="btn" href="https://wa.me/?text=${encodeURIComponent('How to get a free Gemini key for KawanCakap (2 minutes):\n' + location.origin + '/help.html')}" target="_blank" rel="noopener">Share guide on WhatsApp</a></div>
+      <p class="hint">Don't give students your own paid key. They should each use their own.</p>
     </div>
 
     <div class="card stats">

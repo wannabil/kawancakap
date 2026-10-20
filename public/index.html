@@ -13,7 +13,7 @@
 <body>
 <header class="top">
   <a href="#/" class="brand"><img src="/icon.svg" alt="" width="28" height="28"> KawanCakap</a>
-  <nav><a href="#/history">My sessions</a><a href="/teacher.html">Teacher</a></nav>
+  <nav><a href="#/history">My sessions</a><a href="/help.html">Help</a><a href="/teacher.html">Teacher</a></nav>
 </header>
 
 <main id="app" aria-live="polite"></main>
@@ -35,6 +35,7 @@
       <label class="opt"><input type="radio" name="provider" value="class" checked> <span><b>Class code</b> <small>Free, from your teacher</small></span></label>
       <label class="opt"><input type="radio" name="provider" value="gemini"> <span><b>My Gemini key</b> <small>Free key from Google AI Studio</small></span></label>
       <label class="opt"><input type="radio" name="provider" value="openai"> <span><b>My OpenAI key</b> <small>Paid, best voice</small></span></label>
+      <p class="hint">No class code? <a href="/help.html">See how to get a free Gemini key</a></p>
     </fieldset>
 
     <div data-show="class">
@@ -47,7 +48,7 @@
       <label>API key
         <input name="apiKey" type="password" placeholder="Paste your key" spellcheck="false">
       </label>
-      <p class="hint">Your key is saved only on this device and sent straight through for each turn. We never store it. <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener" data-show="gemini">Get a free Gemini key</a></p>
+      <p class="hint">Your key is saved only on this device and sent straight through for each turn. We never store it. <a href="/help.html">How to get a key (step by step)</a></p>
     </div>
 
     <details class="more">

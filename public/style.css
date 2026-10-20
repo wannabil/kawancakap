@@ -144,3 +144,10 @@ details.card summary { cursor: pointer; }
 @keyframes blink { 50% { opacity: .3; } }
 @keyframes pulse { 50% { box-shadow: 0 0 0 6px rgba(245,158,11,.25); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; } }
+
+.guide h3.inline { display: inline; }
+.guide summary { cursor: pointer; }
+.steps-list { padding-left: 1.3rem; line-height: 1.6; }
+.steps-list li { margin: 6px 0; }
+.guide ul { padding-left: 1.2rem; line-height: 1.55; }
+code { background: #f1f5f9; padding: 1px 6px; border-radius: 6px; font-size: .9em; }
