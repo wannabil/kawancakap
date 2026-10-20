@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+.dev.vars
+tests/ui-shots/
+*.wav
+.DS_Store

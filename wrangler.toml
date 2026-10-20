@@ -1,0 +1,19 @@
+name = "kawancakap"
+compatibility_date = "2026-05-01"
+pages_build_output_dir = "public"
+
+[ai]
+binding = "AI"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kawancakap-db"
+database_id = "f2cce502-3560-4b63-a487-5b1e131b7450"
+
+[vars]
+# Free (class-code) sessions on our Workers AI account. BYOK sessions don't count.
+DAILY_SESSION_CAP = "150"
+CLASS_DAILY_CAP = "80"
+IP_DAILY_CAP = "12"
+BYOK_IP_DAILY_CAP = "60"
+# TEACHER_INVITE is a secret: `wrangler pages secret put TEACHER_INVITE --project-name kawancakap`

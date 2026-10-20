@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KawanCakap: SPM Speaking Part 3 practice partner</title>
+<meta name="description" content="Free AI speaking partner for SPM English Paper 3, Part 3 paired discussion. Practise discussing, negotiating and deciding together, then get band feedback.">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <a href="#/" class="brand"><img src="/icon.svg" alt="" width="28" height="28"> KawanCakap</a>
+  <nav><a href="#/history">My sessions</a><a href="/teacher.html">Teacher</a></nav>
+</header>
+
+<main id="app" aria-live="polite"></main>
+
+<template id="tpl-home">
+  <section class="hero">
+    <p class="eyebrow">SPM English 1119/3 · Part 3</p>
+    <h1>Practise the paired discussion with a partner who talks back.</h1>
+    <p class="lead">Your AI partner gives opinions, disagrees, asks you questions and negotiates a decision with you, just like a real Candidate B. Then you get feedback on your grammar, vocabulary and how well you interacted.</p>
+  </section>
+
+  <form id="setup" class="card stack" autocomplete="off">
+    <label>Your name
+      <input name="name" maxlength="40" required placeholder="e.g. Aina">
+    </label>
+
+    <fieldset>
+      <legend>How do you want to connect the AI?</legend>
+      <label class="opt"><input type="radio" name="provider" value="class" checked> <span><b>Class code</b> <small>Free, from your teacher</small></span></label>
+      <label class="opt"><input type="radio" name="provider" value="gemini"> <span><b>My Gemini key</b> <small>Free key from Google AI Studio</small></span></label>
+      <label class="opt"><input type="radio" name="provider" value="openai"> <span><b>My OpenAI key</b> <small>Paid, best voice</small></span></label>
+    </fieldset>
+
+    <div data-show="class">
+      <label>Class code
+        <input name="classCode" maxlength="6" placeholder="6 letters, e.g. K7Q2MX" autocapitalize="characters" spellcheck="false">
+      </label>
+      <p class="hint" id="classMsg"></p>
+    </div>
+    <div data-show="key" hidden>
+      <label>API key
+        <input name="apiKey" type="password" placeholder="Paste your key" spellcheck="false">
+      </label>
+      <p class="hint">Your key is saved only on this device and sent straight through for each turn. We never store it. <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener" data-show="gemini">Get a free Gemini key</a></p>
+    </div>
+
+    <details class="more">
+      <summary>Topic, partner and level <small>(optional)</small></summary>
+      <div class="stack">
+        <label>Topic
+          <select name="topicId"><option value="random">🎲 Surprise me</option></select>
+        </label>
+        <label>Partner type
+          <select name="persona"><option value="random">🎲 Surprise me</option></select>
+        </label>
+        <label>Partner's English level
+          <select name="level">
+            <option value="auto">Match my level (recommended)</option>
+            <option value="A2">Easy</option>
+            <option value="B1">Medium</option>
+            <option value="B2">Challenging</option>
+          </select>
+        </label>
+      </div>
+    </details>
+
+    <p class="err" id="setupErr" role="alert"></p>
+    <button class="btn primary big" type="submit">Start practice</button>
+    <p class="hint center">You'll need a microphone. Use earphones for the best result.</p>
+  </form>
+
+  <section class="how">
+    <h2>How it works</h2>
+    <ol>
+      <li><b>20 seconds</b> to read the mind map.</li>
+      <li><b>Discussion (2 min):</b> talk about the ideas with your partner.</li>
+      <li><b>Decision (1 min):</b> agree on the best option together.</li>
+      <li><b>Further question (2 min):</b> share opinions on a bigger question.</li>
+      <li><b>Feedback:</b> bands 0–6 for Grammar, Vocabulary, Communicative Competence and Overall, plus fixes for your real sentences.</li>
+    </ol>
+    <p class="hint">Practice tool only. Bands are an AI estimate, not an official SPM mark. Practice topics are original, in the SPM Part 3 style.</p>
+  </section>
+</template>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>
